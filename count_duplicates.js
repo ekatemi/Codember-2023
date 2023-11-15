@@ -14,7 +14,7 @@ function find_duplicate_in_array(array) {
         //especially when dealing with dynamic property access or properties
         //with special characters.
         if (count[item]) {
-            count[item] ++;
+            count[item] += 1;
         } else {
             // If the item is not in the count object, initialize its count to 1
             count[item] = 1;
