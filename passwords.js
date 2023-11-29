@@ -503,6 +503,8 @@ const dataArray = inputText.split('\n');
 
 // Convert the array of strings into an array of objects
 const dataObjects = dataArray.map((item) => {
+  console.log(item);
+
   const [range, char, password] = item.split(' ');
   const [min, max] = range.split('-');
   return {
@@ -530,18 +532,19 @@ function find42(objects)
 let invalid = [];
 
 for (const object of dataObjects) {
+  
     const password = object.password;
     const min = object.min;
     const max = object.max;
     const char = object.char;
 
-    
     let charRep = char_repite(char, password);
 
     if (charRep < min || charRep > max)
       invalid.push(password);
   }
-  return(invalid[41]);
+  return(invalid[12]);
 }
   const res = find42(dataObjects);
   console.log(res);
+
